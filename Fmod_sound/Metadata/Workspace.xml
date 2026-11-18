@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="Workspace" id="{1ab026dd-a369-40e1-87b5-303b52a6559a}">
+		<property name="builtBanksOutputDirectory">
+			<value>../../../../../Desktop/HFU/Sound 1/SoundPrototype/SoundPrototype/addons/fmod/SoundBank</value>
+		</property>
+		<relationship name="masterEventFolder">
+			<destination>{5a269e8e-9ddf-443a-b5ca-360a98942c0b}</destination>
+		</relationship>
+		<relationship name="masterTagFolder">
+			<destination>{2b2af301-49b8-4978-9035-88c910deee2d}</destination>
+		</relationship>
+		<relationship name="masterEffectPresetFolder">
+			<destination>{7c955b3f-98f3-49bd-bc0d-1d7bc8df6447}</destination>
+		</relationship>
+		<relationship name="masterParameterPresetFolder">
+			<destination>{bac3484e-da08-427c-8c6e-5ff540391902}</destination>
+		</relationship>
+		<relationship name="masterBankFolder">
+			<destination>{afff4c38-7845-40b1-a593-0e1b6320dbe0}</destination>
+		</relationship>
+		<relationship name="masterSandboxFolder">
+			<destination>{bfe6f0d7-72ab-464a-afad-64fe99687784}</destination>
+		</relationship>
+		<relationship name="masterAssetFolder">
+			<destination>{3bd5ca78-528c-4a83-97af-c7077d02f841}</destination>
+		</relationship>
+		<relationship name="mixer">
+			<destination>{06ccb267-ed27-4268-a36b-935b4acfeb19}</destination>
+		</relationship>
+		<relationship name="profilerSessionFolder">
+			<destination>{8d96835c-fc62-495c-b1d6-bb8186516470}</destination>
+		</relationship>
+		<relationship name="platforms">
+			<destination>{c59a5597-a8be-4502-88b3-56c32914f98e}</destination>
+		</relationship>
+	</object>
+</objects>
