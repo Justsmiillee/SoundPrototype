@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://0ls1rbvxrkum"]
+
+[ext_resource type="PackedScene" uid="uid://uq1ayt0uu3mq" path="res://scenes/player.tscn" id="1_rwgxs"]
+[ext_resource type="PackedScene" uid="uid://bg7lkmwwc7yng" path="res://scenes/wall.tscn" id="2_4wyf3"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_4flbx"]
+size = Vector3(20, 1, 20)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_f3sb7"]
+size = Vector3(20, 1, 20)
+
+[node name="World" type="Node3D" unique_id=1932065375]
+
+[node name="FmodBankLoader" type="FmodBankLoader" parent="." unique_id=1813461123]
+
+[node name="Floor" type="StaticBody3D" parent="." unique_id=439790488]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Floor" unique_id=247031935]
+transform = Transform3D(-1, 0, 1.509958e-07, 0, 1, 0, -1.509958e-07, 0, -1, 0.0016803741, -0.6030967, 0.020228624)
+mesh = SubResource("BoxMesh_4flbx")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor" unique_id=1352348185]
+transform = Transform3D(-1, 0, 1.509958e-07, 0, 1, 0, -1.509958e-07, 0, -1, -0.1544981, -0.7269194, 0.036133766)
+shape = SubResource("BoxShape3D_f3sb7")
+
+[node name="LeLight" type="DirectionalLight3D" parent="." unique_id=2117144746]
+transform = Transform3D(1, 0, 0, 0, 1.1924881e-08, 1, 0, -1, 1.1924881e-08, 0, 13.213552, 0)
+
+[node name="Player" parent="." unique_id=230154839 instance=ExtResource("1_rwgxs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.2374134, 1.0395045, 0)
+
+[node name="Camera3D" type="Camera3D" parent="Player" unique_id=265517993]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -19.150414, 3.006328, 0)
+
+[node name="House" type="Node3D" parent="." unique_id=1534615545]
+
+[node name="Wall" parent="House" unique_id=799858748 instance=ExtResource("2_4wyf3")]
+transform = Transform3D(0.009477016, 0, -1.9999776, 0, 2, 0, 1.9999776, 0, 0.009477016, -5.0430717, 1.9057026, 3.8803587)
+
+[node name="Wall2" parent="House" unique_id=367400787 instance=ExtResource("2_4wyf3")]
+transform = Transform3D(0.009477016, 0, -1.9999776, 0, 2, 0, 1.9999776, 0, 0.009477016, -5.020502, 1.9057026, -2.168212)
+
+[node name="Wall3" parent="House" unique_id=1147144162 instance=ExtResource("2_4wyf3")]
+transform = Transform3D(0.009477016, 0, -1.9999776, 0, 0.5, 0, 1.9999776, 0, 0.009477016, -5.02606, 3.4, 1.306)
+
+[node name="Wall4" parent="House" unique_id=1702693405 instance=ExtResource("2_4wyf3")]
+transform = Transform3D(-2.1855695e-07, 0, 1, 0, 2, 0, -5, 0, -4.371139e-08, 4.9040365, 1.8943315, 0.9323087)
+
+[node name="Wall7" parent="House" unique_id=1683592463 instance=ExtResource("2_4wyf3")]
+transform = Transform3D(5, 0, 0, 0, 2, 0, 0, 0, 1, -0.11730194, 1.8943315, -4.0642953)
+
+[node name="Wall5" parent="House" unique_id=1131451428 instance=ExtResource("2_4wyf3")]
+transform = Transform3D(5, 0, 0, 0, 2, 0, 0, 0, 1, -0.11730194, 1.8943315, 5.9124064)
+
+[node name="Wall6" parent="House" unique_id=61282356 instance=ExtResource("2_4wyf3")]
+transform = Transform3D(5, 0, 0, 0, -2.1855695e-07, -1, 0, 5, -4.371139e-08, -0.10096741, 3.9019232, 0.8895979)

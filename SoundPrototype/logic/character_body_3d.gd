@@ -9,10 +9,10 @@ func _physics_process(delta: float) -> void:
 
 	# Eingabe abfragen
 	var input_dir: Vector2 = Input.get_vector(
-		"ui_left",
-		"ui_right",
-		"ui_up",
-		"ui_down"
+		"walk_down",
+		"walk_up",
+		"walk_left",
+		"walk_right"
 	)
 
 	# Bewegungsrichtung berechnen
