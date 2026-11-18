@@ -3,6 +3,11 @@
 
 # Jan:
 
+House soundscape
+Small composed piece for the house, sounding from a record player
+Add a reverb space to the house
+Suburb soundscape
+
 # Matteo:
 
 # Tim:
