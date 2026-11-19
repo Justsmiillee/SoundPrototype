@@ -5,7 +5,7 @@ extends Node3D
 @export var animation_speed: float = 3.0
 
 @onready var pivot: Node3D = $DoorPivot
-@onready var interaction_area: Area3D = $InteractionArea
+@onready var interaction_area: Area3D = $DoorPivot/InteractionArea
 
 var is_open: bool = false
 var player_near: bool = false

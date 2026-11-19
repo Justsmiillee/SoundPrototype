@@ -25,7 +25,7 @@ transform = Transform3D(-1, 0, 1.509958e-07, 0, 1, 0, -1.509958e-07, 0, -1, -0.1
 shape = SubResource("BoxShape3D_f3sb7")
 
 [node name="LeLight" type="DirectionalLight3D" parent="." unique_id=2117144746]
-transform = Transform3D(1, 0, 0, 0, 1.1924881e-08, 1, 0, -1, 1.1924881e-08, 0, 13.213552, 0)
+transform = Transform3D(-0.59201324, 0, -0.80592823, 0, 1, 0, 0.80592823, 0, -0.59201324, -25.400179, 21.121622, -62.072712)
 light_energy = 3.0
 sky_mode = 1
 
