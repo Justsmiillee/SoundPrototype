@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://bg7lkmwwc7yng"]
 
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_3vyb7"]
+
 [sub_resource type="BoxMesh" id="BoxMesh_epa4f"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_70g7m"]
@@ -8,6 +10,7 @@ size = Vector3(2, 2, 0.1)
 [node name="Wall" type="Node3D" unique_id=799858748]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1023662037]
+physics_material_override = SubResource("PhysicsMaterial_3vyb7")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D" unique_id=1042975073]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 0.1, 0, 0, 0)

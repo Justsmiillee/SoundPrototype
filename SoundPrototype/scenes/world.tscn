@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://uq1ayt0uu3mq" path="res://scenes/player.tscn" id="1_rwgxs"]
 [ext_resource type="PackedScene" uid="uid://bg7lkmwwc7yng" path="res://scenes/wall.tscn" id="2_4wyf3"]
+[ext_resource type="PackedScene" uid="uid://b1uetxxnevnow" path="res://scenes/door.tscn" id="3_4wyf3"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_4flbx"]
 size = Vector3(20, 1, 20)
@@ -25,12 +26,11 @@ shape = SubResource("BoxShape3D_f3sb7")
 
 [node name="LeLight" type="DirectionalLight3D" parent="." unique_id=2117144746]
 transform = Transform3D(1, 0, 0, 0, 1.1924881e-08, 1, 0, -1, 1.1924881e-08, 0, 13.213552, 0)
+light_energy = 3.0
+sky_mode = 1
 
 [node name="Player" parent="." unique_id=230154839 instance=ExtResource("1_rwgxs")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.2374134, 1.0395045, 0)
-
-[node name="Camera3D" type="Camera3D" parent="Player" unique_id=265517993]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -19.150414, 3.006328, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.35553, 1.0395045, 0)
 
 [node name="House" type="Node3D" parent="." unique_id=1534615545]
 
@@ -54,3 +54,10 @@ transform = Transform3D(5, 0, 0, 0, 2, 0, 0, 0, 1, -0.11730194, 1.8943315, 5.912
 
 [node name="Wall6" parent="House" unique_id=61282356 instance=ExtResource("2_4wyf3")]
 transform = Transform3D(5, 0, 0, 0, -2.1855695e-07, -1, 0, 5, -4.371139e-08, -0.10096741, 3.9019232, 0.8895979)
+
+[node name="Door" parent="House" unique_id=1662589380 instance=ExtResource("3_4wyf3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -4.999842, 1.3757842, 0.8439264)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="House" unique_id=2105622302]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6717818, 0)
+omni_range = 50.0
