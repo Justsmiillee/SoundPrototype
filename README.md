@@ -10,6 +10,9 @@ Suburb soundscape
 
 # Matteo:
 
+Phone ringing
+Phone gets destroyed
+
 # Tim:
 Grass Footsteps
 
