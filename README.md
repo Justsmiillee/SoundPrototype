@@ -15,15 +15,13 @@ Phone gets destroyed
 
 # Tim:
 Grass Footsteps
-
-
+Footsteps Indoors
+Door Sounds
 
 Sound Ideen:
 Outdoors enviorment
 Indoors enviroment
-Footsteps Indoors
-Indoors Ambiante 
-Outdoors Ambiante
+
 
 
 
