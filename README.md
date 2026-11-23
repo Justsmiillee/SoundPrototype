@@ -5,26 +5,15 @@
 
 House soundscape;
 Small composed piece for the house, sounding from a record player;
-Add a reverb space to the house;
+Add a reverb space to the house
 
 # Matteo:
 
-Phone ringing
-Phone gets destroyed
+Phone ringing;
+Phone gets destroyed;
 Suburb soundscape
 
 # Tim:
-Grass Footsteps
-Footsteps Indoors
+Grass Footsteps;
+Footsteps Indoors;
 Door Sounds
-
-Sound Ideen:
-Outdoors enviorment
-Indoors enviroment
-
-
-
-
-
-
-
