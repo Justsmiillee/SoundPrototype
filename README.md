@@ -6,12 +6,12 @@
 House soundscape;
 Small composed piece for the house, sounding from a record player;
 Add a reverb space to the house;
-Suburb soundscape
 
 # Matteo:
 
 Phone ringing
 Phone gets destroyed
+Suburb soundscape
 
 # Tim:
 Grass Footsteps
