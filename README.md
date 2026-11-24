@@ -11,7 +11,7 @@ Add a reverb space to the house
 
 Phone ringing;
 Phone gets destroyed;
-Suburb soundscape: ducks, lawnmower, car sounds, garden hose, kids laughing, slight wind? (all randomized);
+Suburb soundscape, single sounds: ducks, lawnmower, car sounds, garden hose, kids laughing;
 
 # Tim:
 Grass Footsteps;
