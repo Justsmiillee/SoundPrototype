@@ -3,6 +3,8 @@
 [ext_resource type="PackedScene" uid="uid://uq1ayt0uu3mq" path="res://scenes/player.tscn" id="1_rwgxs"]
 [ext_resource type="PackedScene" uid="uid://bg7lkmwwc7yng" path="res://scenes/wall.tscn" id="2_4wyf3"]
 [ext_resource type="PackedScene" uid="uid://b1uetxxnevnow" path="res://scenes/door.tscn" id="3_4wyf3"]
+[ext_resource type="Script" uid="uid://bkvtubdj6sg7b" path="res://logic/SoundAreaGrass.gd" id="4_71j4m"]
+[ext_resource type="Script" uid="uid://bx5oqee5xe5xo" path="res://logic/SoundAreaWood.gd" id="4_k0juu"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_4flbx"]
 size = Vector3(20, 1, 20)
@@ -10,9 +12,22 @@ size = Vector3(20, 1, 20)
 [sub_resource type="BoxShape3D" id="BoxShape3D_f3sb7"]
 size = Vector3(20, 1, 20)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_hhcso"]
+size = Vector3(15.059128, 1, 4.058502)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4wyf3"]
+size = Vector3(15.056343, 1, 5.9233427)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tkpwu"]
+size = Vector3(5.2510986, 1, 15.99846)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_gplkt"]
+size = Vector3(9.807373, 1, 9.818787)
+
 [node name="World" type="Node3D" unique_id=1932065375]
 
 [node name="FmodBankLoader" type="FmodBankLoader" parent="." unique_id=1813461123]
+bank_paths = ["res://addons/fmod/SoundBank/Desktop/Master.strings.bank", "res://addons/fmod/SoundBank/Desktop/Master.bank"]
 
 [node name="Floor" type="StaticBody3D" parent="." unique_id=439790488]
 
@@ -52,8 +67,8 @@ transform = Transform3D(5, 0, 0, 0, 2, 0, 0, 0, 1, -0.11730194, 1.8943315, -4.06
 [node name="Wall5" parent="House" unique_id=1131451428 instance=ExtResource("2_4wyf3")]
 transform = Transform3D(5, 0, 0, 0, 2, 0, 0, 0, 1, -0.11730194, 1.8943315, 5.9124064)
 
-[node name="Wall6" parent="House" unique_id=61282356 instance=ExtResource("2_4wyf3")]
-transform = Transform3D(5, 0, 0, 0, -2.1855695e-07, -1, 0, 5, -4.371139e-08, -0.10096741, 3.9019232, 0.8895979)
+[node name="Dach" parent="House" unique_id=61282356 instance=ExtResource("2_4wyf3")]
+transform = Transform3D(5, 0, 0, 0, -2.1855695e-07, -1, 0, 5, -4.371139e-08, -0.10096741, 3.9019232, 0.9065337)
 
 [node name="Door" parent="House" unique_id=1662589380 instance=ExtResource("3_4wyf3")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -4.999842, 1.3757842, 0.8439264)
@@ -61,3 +76,39 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -4.9
 [node name="OmniLight3D" type="OmniLight3D" parent="House" unique_id=2105622302]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6717818, 0)
 omni_range = 50.0
+
+[node name="Area3d_Outdoor" type="Area3D" parent="." unique_id=1873469701]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 8.736849)
+script = ExtResource("4_71j4m")
+
+[node name="Grass1" type="CollisionShape3D" parent="Area3d_Outdoor" unique_id=453033687]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.473732, -0.31390834, -0.69984436)
+shape = SubResource("BoxShape3D_hhcso")
+
+[node name="Grass2" type="CollisionShape3D" parent="Area3d_Outdoor" unique_id=504923686]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.59309, -0.2106793, -15.895745)
+shape = SubResource("BoxShape3D_4wyf3")
+
+[node name="Grass3" type="CollisionShape3D" parent="Area3d_Outdoor" unique_id=1455309898]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.8159633, -0.21747899, -5.1490517)
+shape = SubResource("BoxShape3D_tkpwu")
+
+[node name="Grass4" type="CollisionShape3D" parent="Area3d_Outdoor" unique_id=65551098]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.416614, -0.21747899, -10.81118)
+shape = SubResource("BoxShape3D_tkpwu")
+
+[node name="FmodEventEmitter3D" type="FmodEventEmitter3D" parent="Area3d_Outdoor" unique_id=461493924]
+event_name = "event:/GrassFootsteps"
+event_guid = "{4b3b1f67-b669-4fe3-98b6-43ab99780018}"
+
+[node name="Area3d_Indoors" type="Area3D" parent="." unique_id=1278160449]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.416614, -0.21747899, -2.0743313)
+script = ExtResource("4_k0juu")
+
+[node name="Wood" type="CollisionShape3D" parent="Area3d_Indoors" unique_id=1964879342]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.459407, 0, 3.0107079)
+shape = SubResource("BoxShape3D_gplkt")
+
+[node name="FmodEventEmitter3D" type="FmodEventEmitter3D" parent="Area3d_Indoors" unique_id=51736437]
+event_name = "event:/WoodFootsteps"
+event_guid = "{5a58fb96-7306-449f-bfdb-22a8183bf0ff}"

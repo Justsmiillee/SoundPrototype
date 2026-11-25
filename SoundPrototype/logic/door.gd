@@ -26,6 +26,7 @@ func _process(delta: float) -> void:
 
 	if player_near and Input.is_action_just_pressed("interact"):
 		is_open = not is_open
+		play_door_footstep()
 
 		if is_open:
 			target_rotation = closed_rotation + deg_to_rad(open_angle)
@@ -47,3 +48,7 @@ func _on_body_entered(body: Node3D) -> void:
 func _on_body_exited(body: Node3D) -> void:
 	if body is CharacterBody3D:
 		player_near = false
+		
+
+func play_door_footstep() -> void:
+	FmodServer.play_one_shot("event:/Door")
