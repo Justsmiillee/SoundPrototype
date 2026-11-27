@@ -32,3 +32,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0116825, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="DoorPivot/InteractionArea" unique_id=1012716090]
 shape = SubResource("BoxShape3D_5f452")
+
+[node name="FmodEventEmitter3D" type="FmodEventEmitter3D" parent="DoorPivot/InteractionArea" unique_id=1287285251]
+event_name = "event:/Door"
+event_guid = "{fcb1fc12-254b-429a-8de3-efc168352359}"

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="DAWProject" id="{7d0e243a-6f94-42c2-9c70-76224318d54f}">
+		<property name="assetPath" />
+		<property name="dawProjectPath">
+			<value>C:/Users/Nutzer/Desktop/HFU/Sound 1/Door_Sound.rpp</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{3bd5ca78-528c-4a83-97af-c7077d02f841}</destination>
+		</relationship>
+	</object>
+</objects>
