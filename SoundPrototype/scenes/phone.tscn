@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://dujki72s1madq"]
+
+[ext_resource type="Script" uid="uid://72wx71kpuq7" path="res://logic/phone.gd" id="1_08mii"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_g4v7s"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_g4v7s"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_57qmd"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_yf5fn"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_57qmd"]
+
+[node name="Phone" type="Node3D" unique_id=1434766475]
+script = ExtResource("1_08mii")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=649175277]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D" unique_id=542675777]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0)
+mesh = SubResource("BoxMesh_g4v7s")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=707600040]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0)
+shape = SubResource("BoxShape3D_g4v7s")
+
+[node name="FmodEventEmitter3D" type="FmodEventEmitter3D" parent="." unique_id=33146312]
+event_name = "event:/PhoneLINGFmod"
+event_guid = "{de3a0e88-c91b-42aa-a298-ff9d4276e223}"
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="." unique_id=267132438]
+transform = Transform3D(1.205, 0, 0, 0, 0.39, 0, 0, 0, 0.565, 0, 0.4946785, -0.17997736)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D2" unique_id=411477743]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+mesh = SubResource("BoxMesh_57qmd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D2" unique_id=433477703]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+shape = SubResource("BoxShape3D_yf5fn")
+
+[node name="InteractArea" type="Area3D" parent="." unique_id=1022789511]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="InteractArea" unique_id=1337853215]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
+shape = SubResource("BoxShape3D_57qmd")
+
+[node name="RingPos" type="Node3D" parent="." unique_id=947183590]
+
+[node name="RingSound" type="FmodEventEmitter3D" parent="RingPos" unique_id=1977358074]
+event_name = "event:/PhoneLINGFmod"
+event_guid = "{de3a0e88-c91b-42aa-a298-ff9d4276e223}"
+
+[node name="DialSOund" type="FmodEventEmitter3D" parent="RingPos" unique_id=2086269289]
+event_name = "event:/Phone_dial"
+event_guid = "{a985c5e2-2ec5-4cd6-9cd4-13e3bf2103b9}"

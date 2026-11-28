@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{da52ce28-3cfc-4237-99c5-b0928402c8af}">
+		<property name="assetPath">
+			<value>LowQuack.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>1.3636281179138321</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{e6966561-e254-4011-8851-c0a7ec70de1f}</destination>
+		</relationship>
+	</object>
+</objects>

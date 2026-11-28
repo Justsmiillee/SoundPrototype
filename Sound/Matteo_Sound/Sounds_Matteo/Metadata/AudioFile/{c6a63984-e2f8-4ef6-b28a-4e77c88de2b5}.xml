@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{c6a63984-e2f8-4ef6-b28a-4e77c88de2b5}">
+		<property name="assetPath">
+			<value>ShutNew.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>4</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{e6966561-e254-4011-8851-c0a7ec70de1f}</destination>
+		</relationship>
+	</object>
+</objects>

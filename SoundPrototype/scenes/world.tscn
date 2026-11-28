@@ -5,6 +5,8 @@
 [ext_resource type="PackedScene" uid="uid://b1uetxxnevnow" path="res://scenes/door.tscn" id="3_4wyf3"]
 [ext_resource type="Script" uid="uid://bkvtubdj6sg7b" path="res://logic/SoundAreaGrass.gd" id="4_71j4m"]
 [ext_resource type="Script" uid="uid://bx5oqee5xe5xo" path="res://logic/SoundAreaWood.gd" id="4_k0juu"]
+[ext_resource type="PackedScene" uid="uid://dujki72s1madq" path="res://scenes/phone.tscn" id="6_qfnet"]
+[ext_resource type="PackedScene" uid="uid://b2nx8rmmq5wwd" path="res://scenes/THEtable.tscn" id="7_i7141"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_4flbx"]
 size = Vector3(20, 1, 20)
@@ -27,7 +29,7 @@ size = Vector3(9.807373, 1, 9.818787)
 [node name="World" type="Node3D" unique_id=1932065375]
 
 [node name="FmodBankLoader" type="FmodBankLoader" parent="." unique_id=1813461123]
-bank_paths = ["res://addons/fmod/SoundBank/Desktop/Master.strings.bank", "res://addons/fmod/SoundBank/Desktop/Master.bank"]
+bank_paths = ["res://addons/fmod/SoundBank/Desktop/Matteo.bank"]
 
 [node name="Floor" type="StaticBody3D" parent="." unique_id=439790488]
 
@@ -98,7 +100,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.416614, -0.21747899, -10.81
 shape = SubResource("BoxShape3D_tkpwu")
 
 [node name="FmodEventEmitter3D" type="FmodEventEmitter3D" parent="Area3d_Outdoor" unique_id=461493924]
-event_name = "event:/GrassFootsteps"
 event_guid = "{4b3b1f67-b669-4fe3-98b6-43ab99780018}"
 
 [node name="Area3d_Indoors" type="Area3D" parent="." unique_id=1278160449]
@@ -110,5 +111,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.459407, 0, 3.0107079)
 shape = SubResource("BoxShape3D_gplkt")
 
 [node name="FmodEventEmitter3D" type="FmodEventEmitter3D" parent="Area3d_Indoors" unique_id=51736437]
-event_name = "event:/WoodFootsteps"
 event_guid = "{5a58fb96-7306-449f-bfdb-22a8183bf0ff}"
+
+[node name="Phone" parent="." unique_id=1434766475 node_paths=PackedStringArray("interior_area") instance=ExtResource("6_qfnet")]
+transform = Transform3D(0.525, 0, 0, 0, 0.525, 0, 0, 0, 0.525, -1.846, 1.44, -3.057)
+interior_area = NodePath("../Area3d_Indoors")
+
+[node name="Table" parent="." unique_id=837530627 instance=ExtResource("7_i7141")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -3)

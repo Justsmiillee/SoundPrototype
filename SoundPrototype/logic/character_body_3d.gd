@@ -9,8 +9,10 @@ extends CharacterBody3D
 @onready var camera: Camera3D = $Camera3D
 
 var mouse_rotation_x: float = 0.0
+var cursor_locked = true
 
 func _ready() -> void:
+	camera.current = true
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
 
@@ -35,7 +37,6 @@ func _unhandled_input(event: InputEvent) -> void:
 	# ESC zum Freigeben der Maus
 	if event.is_action_pressed("ui_cancel"):
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
-
 
 func _physics_process(delta: float) -> void:
 

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{8d41d5fd-6e00-455a-b4f3-4159c4d2034c}">
+		<property name="assetPath">
+			<value>PhoneLINGFmod.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>3.6757291666666667</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{e6966561-e254-4011-8851-c0a7ec70de1f}</destination>
+		</relationship>
+	</object>
+</objects>

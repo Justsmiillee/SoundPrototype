@@ -68,3 +68,4 @@ func _on_step_timer_timeout() -> void:
 
 func play_wood_footstep() -> void:
 	FmodServer.play_one_shot("event:/WoodFootsteps")
+	
